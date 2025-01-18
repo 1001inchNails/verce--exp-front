@@ -1,0 +1,239 @@
+@font-face {
+font-family: "Geist";
+src: url("https://pham.codes/d/GeistMonoVF.woff2") format("woff2");
+}
+
+*{
+margin: 0;
+font-family: 'Geist';
+color: #b0bec5;
+}
+body{
+background-color: #37474f;
+min-width: 380px;
+}
+main{
+height: 90%;
+display: grid;
+grid-template-columns: repeat(4, minmax(300px, 1fr));
+gap: 20px;
+row-gap: 20px;
+padding: 60px;   
+}
+nav{
+background-color: #263238;
+height: 10%;
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: flex-start;
+padding: 20px;
+row-gap: 20px;
+}
+#botones{
+width: fit-content;
+height: fit-content;
+}
+#botones button{
+background-color: #546e7a;
+padding: 10px;
+border-radius: 5px;
+}
+#botones button:hover{
+cursor: pointer;
+background-color: #7899aa;
+box-shadow: 5px 5px black;    
+}
+.carta {
+background-color: #455a64;
+border-radius: 10px;
+box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+overflow: hidden;
+transition: transform 0.3s ease;
+min-width: 100px;
+max-width: 300px;
+min-height: 200px;
+}
+.carta:hover {
+transform: translateY(-5px);
+}
+.carta img {
+width: 100%;
+object-fit: cover;
+border-top-left-radius: 10px;
+border-top-right-radius: 10px;
+}
+.carta p {
+padding: 15px;
+margin: 0;
+line-height: 1.5;
+}
+/*Modal busqueda*/
+#contenedorFormBusq{
+display: none;
+position: fixed;
+top: 0;
+left: 0;
+right: 0;
+bottom: 0;
+margin: auto;
+max-width: 100vw;
+max-height: 100vh;
+overflow-y: hidden;
+background-color: rgba(0,0,0,0.7);
+}
+#formularioBusq{
+position: fixed;
+top: 40%;
+left: 50%;
+transform: translate(-50%, -50%);
+background-color: #455a64;
+border-radius: 10px;
+padding: 20px;
+max-width: 400px;
+margin: 50px auto;
+}
+#contenedorFormBusq label {
+display: block;
+}
+#nombreBusq{
+background-color: #546e7a;
+}
+#buttBusq{
+border-radius: 5px;
+background-color: #546e7a;
+}
+#cancelBusq{
+border-radius: 5px;
+background-color: #546e7a;
+}
+#buttBusq:hover{
+cursor: pointer;
+background-color: #7899aa;
+border-radius: 5px;
+}
+#cancelBusq:hover{
+cursor: pointer;
+background-color: #7899aa;
+border-radius: 5px;
+}
+
+
+/*Modal Nuevo user*/
+#contenedorFormNue {
+display: none;
+position: fixed;
+top: 0;
+left: 0;
+right: 0;
+bottom: 0;
+margin: auto;
+max-width: 100vw;
+max-height: 100vh;
+overflow-y: hidden;
+background-color: rgba(0,0,0,0.7);
+}
+#contenedorFormNue form {
+position: fixed;
+top: 40%;
+left: 50%;
+transform: translate(-50%, -50%);
+background-color: #455a64;
+border-radius: 10px;
+padding: 20px;
+padding-right: 35px;
+max-width: 400px;
+margin: 50px auto;
+}
+#contenedorFormNue label {
+display: block;
+margin-bottom: 8px;
+}
+#contenedorFormNue input[type="text"],
+#contenedorFormNue input[type="tel"],
+#contenedorFormNue input[type="email"] {
+width: 100%;
+padding: 8px;
+margin-bottom: 12px;
+border-radius: 4px;
+background-color: #546e7a;
+}
+#buttNue{
+border-radius: 5px;
+background-color: #546e7a;
+}
+#cancelNue{
+border-radius: 5px;
+background-color: #546e7a;
+}
+#buttNue:hover{
+cursor: pointer;
+background-color: #7899aa;
+border-radius: 5px;
+}
+#cancelNue:hover{
+cursor: pointer;
+background-color: #7899aa;
+border-radius: 5px;
+}
+
+/*Modal mensaje*/
+#contenedorMensaje{
+display: none;
+position: fixed;
+top: 0;
+left: 0;
+right: 0;
+bottom: 0;
+margin: auto;
+max-width: 100vw;
+max-height: 100vh;
+overflow-y: hidden;
+background-color: rgba(0,0,0,0.7);
+}
+#formMensaje{
+position: fixed;
+top: 40%;
+left: 50%;
+transform: translate(-50%, -50%);
+background-color: #455a64;
+border-radius: 10px;
+padding: 30px;
+max-width: 400px;
+margin: 50px auto;
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+gap: 20px;
+}
+
+#contMens{
+border-radius: 5px;
+background-color: #546e7a;
+}
+#contMens:hover{
+cursor: pointer;
+background-color: #7899aa;
+border-radius: 5px;
+}
+
+
+/* Responsive */
+@media (min-width:958px) and (max-width: 1200px){
+main{
+grid-template-columns: repeat(3, minmax(300px, 1fr));
+}
+}
+
+@media (min-width:661px) and (max-width: 957px){
+main{
+grid-template-columns: repeat(2, minmax(300px, 1fr));
+}
+}
+
+@media (max-width: 660px){
+main{
+grid-template-columns: repeat(1, minmax(300px, 1fr));
+}
+}

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test API</title>
+    <link rel="stylesheet" href="main.css" type="text/css">
+</head>
+<body>
+    <div id="contenidoT">
+        <nav>
+            <div id="titulo">
+                <h1>Agenda 2024/25</h1>
+            </div>
+            <div id="botones">
+                <button id="todos">Ver todos</button>
+                <button id="busc">Buscar</button>
+                <button id="nue">Nuevo usuario</button>
+    
+            </div>
+        </nav>
+        <main>
+
+        </main>
+    
+        
+    </div>
+    
+    <div id="contenedorFormBusq">
+        <form id="formularioBusq">
+            <label for="nombreBusq">Introduzca busqueda</label>
+            <input type="text" id="nombreBusq" name="nombreBusq" required value="">
+            <input id="buttBusq" type="submit" value="Buscar">
+            <button id="cancelBusq">Cancelar</button>
+        </form>
+    </div>
+    
+    <div id="contenedorFormNue">
+        <form id="formularioNue">
+            <label for="nombreNue">Introduzca nombre</label>
+            <input type="text" id="nombreNue" name="nombreNue" required value="">
+            <label for="apellidosNue">Introduzca apellidos</label>
+            <input type="text" id="apellidosNue" name="apellidosNue" required value="">
+            <label for="telefonoNue">Introduzca telefono</label>
+            <input type="tel" id="telefonoNue" name="telefonoNue" pattern="[0-9]{9}" required value="">
+            <label for="emailNue">Introduzca email</label>
+            <input type="email" id="emailNue" name="emailNue" required value="">
+            <input id="buttNue" type="submit" value="Enviar">
+            <button id="cancelNue">Cancelar</button>
+        </form>
+    </div>
+
+    <div id="contenedorMensaje">
+        <form id="formMensaje">
+            <p id="mensaje"></p>
+            <button id="contMens">Continuar</button>
+        </form>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>
