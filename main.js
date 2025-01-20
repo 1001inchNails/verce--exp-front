@@ -7,7 +7,7 @@ $(document).ready(function(){
     }
     $('#todos').click(async function(){ // funcionalidad ver todos los usuarios
         await $.ajax({
-            url: 'https://vercel-exp-back.vercel.app/api/users',
+            url: 'https://vercel-exp-back2.vercel.app/api/users',
             type: "GET",
             crossDomain: true,
             success: function(data){
@@ -58,7 +58,7 @@ $(document).ready(function(){
         e.preventDefault();
         let busqueda=$('#nombreBusq').val();    // se coje el valor del input
         await $.ajax({
-            url: `https://vercel-exp-back.vercel.app/api/users/${busqueda}`, // se mete la busqueda en la llamada al endpoint
+            url: `https://vercel-exp-back2.vercel.app/api/users/${busqueda}`, // se mete la busqueda en la llamada al endpoint
             type: "GET",
             crossDomain: true,  // para la movida del CORS
             success: function(data){
@@ -125,7 +125,7 @@ $(document).ready(function(){
           };
 
           await $.ajax({
-            url: 'https://vercel-exp-back.vercel.app/api/datos',
+            url: 'https://vercel-exp-back2.vercel.app/api/datos',
             type: "POST",
             contentType: 'application/json',    // sin esta linea no se puede acceder al req.body
             dataType: "json",
